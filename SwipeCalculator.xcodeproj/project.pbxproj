@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		680308801C6EC60B00DF0C5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6803087F1C6EC60B00DF0C5D /* main.m */; };
+		680308831C6EC60B00DF0C5D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 680308821C6EC60B00DF0C5D /* AppDelegate.m */; };
+		6803088B1C6EC60B00DF0C5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6803088A1C6EC60B00DF0C5D /* Assets.xcassets */; };
+		680308991C6EC64600DF0C5D /* ZCCalculatorVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 680308951C6EC64600DF0C5D /* ZCCalculatorVIew.m */; };
+		6803089A1C6EC64600DF0C5D /* ZCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680308971C6EC64600DF0C5D /* ZCBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6803087B1C6EC60B00DF0C5D /* SwipeCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipeCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6803087F1C6EC60B00DF0C5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680308811C6EC60B00DF0C5D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		680308821C6EC60B00DF0C5D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6803088A1C6EC60B00DF0C5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6803088F1C6EC60B00DF0C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		680308951C6EC64600DF0C5D /* ZCCalculatorVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCCalculatorVIew.m; sourceTree = "<group>"; };
+		680308961C6EC64600DF0C5D /* ZCCalculatorVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCCalculatorVIew.h; sourceTree = "<group>"; };
+		680308971C6EC64600DF0C5D /* ZCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBaseViewController.m; sourceTree = "<group>"; };
+		680308981C6EC64600DF0C5D /* ZCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		680308781C6EC60B00DF0C5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		680308721C6EC60B00DF0C5D = {
+			isa = PBXGroup;
+			children = (
+				6803087D1C6EC60B00DF0C5D /* SwipeCalculator */,
+				6803087C1C6EC60B00DF0C5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6803087C1C6EC60B00DF0C5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6803087B1C6EC60B00DF0C5D /* SwipeCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6803087D1C6EC60B00DF0C5D /* SwipeCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				680308951C6EC64600DF0C5D /* ZCCalculatorVIew.m */,
+				680308961C6EC64600DF0C5D /* ZCCalculatorVIew.h */,
+				680308971C6EC64600DF0C5D /* ZCBaseViewController.m */,
+				680308981C6EC64600DF0C5D /* ZCBaseViewController.h */,
+				680308811C6EC60B00DF0C5D /* AppDelegate.h */,
+				680308821C6EC60B00DF0C5D /* AppDelegate.m */,
+				6803088A1C6EC60B00DF0C5D /* Assets.xcassets */,
+				6803088F1C6EC60B00DF0C5D /* Info.plist */,
+				6803087E1C6EC60B00DF0C5D /* Supporting Files */,
+			);
+			path = SwipeCalculator;
+			sourceTree = "<group>";
+		};
+		6803087E1C6EC60B00DF0C5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6803087F1C6EC60B00DF0C5D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6803087A1C6EC60B00DF0C5D /* SwipeCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 680308921C6EC60B00DF0C5D /* Build configuration list for PBXNativeTarget "SwipeCalculator" */;
+			buildPhases = (
+				680308771C6EC60B00DF0C5D /* Sources */,
+				680308781C6EC60B00DF0C5D /* Frameworks */,
+				680308791C6EC60B00DF0C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwipeCalculator;
+			productName = SwipeCalculator;
+			productReference = 6803087B1C6EC60B00DF0C5D /* SwipeCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		680308731C6EC60B00DF0C5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = soham;
+				TargetAttributes = {
+					6803087A1C6EC60B00DF0C5D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 680308761C6EC60B00DF0C5D /* Build configuration list for PBXProject "SwipeCalculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 680308721C6EC60B00DF0C5D;
+			productRefGroup = 6803087C1C6EC60B00DF0C5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6803087A1C6EC60B00DF0C5D /* SwipeCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		680308791C6EC60B00DF0C5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6803088B1C6EC60B00DF0C5D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		680308771C6EC60B00DF0C5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6803089A1C6EC64600DF0C5D /* ZCBaseViewController.m in Sources */,
+				680308831C6EC60B00DF0C5D /* AppDelegate.m in Sources */,
+				680308991C6EC64600DF0C5D /* ZCCalculatorVIew.m in Sources */,
+				680308801C6EC60B00DF0C5D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		680308901C6EC60B00DF0C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		680308911C6EC60B00DF0C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		680308931C6EC60B00DF0C5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwipeCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soham.SwipeCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		680308941C6EC60B00DF0C5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SwipeCalculator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.soham.SwipeCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		680308761C6EC60B00DF0C5D /* Build configuration list for PBXProject "SwipeCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				680308901C6EC60B00DF0C5D /* Debug */,
+				680308911C6EC60B00DF0C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		680308921C6EC60B00DF0C5D /* Build configuration list for PBXNativeTarget "SwipeCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				680308931C6EC60B00DF0C5D /* Debug */,
+				680308941C6EC60B00DF0C5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 680308731C6EC60B00DF0C5D /* Project object */;
+}
