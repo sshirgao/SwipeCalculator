@@ -10,17 +10,25 @@
 
 @interface ZCCalculatorVIew ()
 
+
+
 @end
 
 @implementation ZCCalculatorVIew
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+#define answer_color     [UIColor purpleColor]
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Trials");
-    
+
     //Bottom row
-    self.view.backgroundColor = [UIColor whiteColor];
+//    self.view.backgroundColor = UIColorFromRGB(0xE0E0B2);
+
     UIButton *zero = [self create_button_for_number:@"0"];
     CGRect z_frm = zero.frame;
     z_frm.origin.y = self.screenheight - zero.frame.size.height;
@@ -68,12 +76,18 @@
     self.num_label.font = [UIFont systemFontOfSize:30];
     self.num_label.text = @"";
     [[self view] addSubview:digit_disp];
+
     
     UILabel *transac_disp = [[UILabel alloc] initWithFrame:CGRectMake(0,0, self.screenwidth-10, seven.frame.origin.y/2)];
     transac_disp.textAlignment = NSTextAlignmentRight;
     self.transac_label = transac_disp;
         self.transac_label.font = [UIFont systemFontOfSize:30];
     [[self view] addSubview:transac_disp];
+    
+//    self.view.backgroundColor =  UIColorFromRGB(0xE0E0B2);
+//    self.transac_label.backgroundColor = UIColorFromRGB(0xE0E0B2);
+//        self.num_label.backgroundColor = UIColorFromRGB(0xE0E0B2);
+    self.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *imgv = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.num_label.frame.origin.y-20, 40, 40)];
     imgv.contentMode = UIViewContentModeScaleAspectFit;
@@ -135,6 +149,25 @@
     [self center_view:downarrow];
     [v addSubview:downarrow];
     [v addSubview:div];
+    
+    
+    UIImageView *longpress = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,50,50)];
+    [longpress setImage:[UIImage imageNamed:@"ic_touch_app_white_48pt"]];
+    [longpress setContentMode:UIViewContentModeScaleAspectFit];
+    [self center_view:longpress];
+    [self center_view_vertically:longpress];
+    UILabel *lp = [self get_label_for_text:@"Long Press"];
+    UILabel *clear = [self get_label_for_text:@"Clear"];
+    [self placeview:lp belowview:longpress withoffset:10];
+    [self placeview:clear belowview:lp withoffset:2];
+    [self center_view:lp];
+    [self center_view:clear];
+    [v addSubview:longpress];
+    [v addSubview:lp];
+        [v addSubview:clear];
+    
+    
+    
     
     UITapGestureRecognizer *remove_tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(remove_help_view)];
     [v addGestureRecognizer:remove_tap];
@@ -216,7 +249,7 @@
 
 -(void)update_total_and_make_equal
 {
-    if (self.num_label.textColor != [UIColor purpleColor])
+    if (self.num_label.textColor != answer_color)
     {
         if ([self.transac_label.text isEqualToString:@"+"])
         {
@@ -247,7 +280,7 @@
         }
     }
     
-    self.num_label.textColor = [UIColor purpleColor];
+    self.num_label.textColor = answer_color;
 
 }
 
@@ -260,7 +293,9 @@
 -(UIButton *)create_button_for_number:(NSString *)number
 {
     UIButton *v = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, self.screenwidth/3, self.screenwidth/3)];
-    v.backgroundColor = [UIColor groupTableViewBackgroundColor];
+//    v.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    v.backgroundColor = UIColorFromRGB(0x7FBF7F);
+
 //    v.layer.borderColor=[[UIColor blackColor] CGColor];
 //    v.layer.borderWidth=1;
     v.userInteractionEnabled = YES;
@@ -300,16 +335,38 @@
     self.num1=0;
     self.num_label.text=@"";
     self.transac_label.text=@"";
+    
+    UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screenwidth, self.num_label.frame.origin.y+self.num_label.frame.size.height)];
+    v.backgroundColor=[UIColor clearColor];
+//    v.layer.cornerRadius = v.frame.size.width/2;
+//    v.layer.masksToBounds = YES;
+    [[self view] addSubview:v];
+    [UIView    animateWithDuration:0.5 animations:^
+     {
+             v.backgroundColor = UIColorFromRGB(0xFFC966);
+         v.backgroundColor=[UIColor clearColor];
+     }completion:^(BOOL finished){[v removeFromSuperview];}];
 }
 
 -(IBAction)numpad_pressed:(id)sender
 {
-    if (self.num_label.textColor == [UIColor purpleColor])
+    if (self.num_label.textColor == answer_color)
     {
         self.num_label.text=@"";
         self.num_label.textColor = [UIColor darkGrayColor];
     }
     UIButton *b = (UIButton *)sender;
+    UIView *v = [[UIView alloc] initWithFrame:b.frame];
+    v.backgroundColor = UIColorFromRGB(0xE0E0B2);
+    v.layer.cornerRadius = v.frame.size.width/2;
+    v.layer.masksToBounds = YES;
+    [[self view] addSubview:v];
+    [UIView    animateWithDuration:0.5 animations:^
+    {
+        v.backgroundColor=[UIColor clearColor];
+    }completion:^(BOOL finished){[v removeFromSuperview];}];
+
+
     if (![b.titleLabel.text isEqualToString:@"="])
     {
         self.num_label.text = [NSString stringWithFormat:@"%@%@",self.num_label.text,b.titleLabel.text];
