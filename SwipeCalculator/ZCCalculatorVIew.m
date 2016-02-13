@@ -7,6 +7,7 @@
 //
 
 #import "ZCCalculatorVIew.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface ZCCalculatorVIew ()
 
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"Trials");
+
 
     //Bottom row
 //    self.view.backgroundColor = UIColorFromRGB(0xE0E0B2);
@@ -97,6 +99,8 @@
     imgv.userInteractionEnabled = YES;
     [self.view addSubview:imgv];
     
+    
+        [self info_tap];
     
 }
 
@@ -193,8 +197,19 @@
     [v removeFromSuperview];
 }
 
+-(void)vibrate
+{
+    NSMutableDictionary* dict = [NSMutableDictionary dictionary];
+    NSMutableArray* arr = [NSMutableArray array ];
+    [arr addObject:[NSNumber numberWithBool:NO]];    //stop for 500ms
+    [arr addObject:[NSNumber numberWithInt:500]];
+    [dict setObject:arr forKey:@"VibePattern"];
+    [dict setObject:[NSNumber numberWithInt:1] forKey:@"Intensity"];
+}
+
 -(void)add
 {
+    AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     NSLog(@"add");
     [self update_total_and_make_equal];
     self.transac_label.text=@"+";
@@ -203,6 +218,7 @@
 -(void)sub
 {
     NSLog(@"sub");
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     [self update_total_and_make_equal];
         self.transac_label.text=@"-";
 }
@@ -210,6 +226,7 @@
 -(void)mul
 {
     NSLog(@"mul");
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     [self update_total_and_make_equal];
         self.transac_label.text=@"x";
 }
@@ -217,6 +234,7 @@
 -(void)div
 {
     NSLog(@"div");
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     [self update_total_and_make_equal];
     self.transac_label.text=@"/";
 }
@@ -335,6 +353,7 @@
     self.num1=0;
     self.num_label.text=@"";
     self.transac_label.text=@"";
+            AudioServicesPlayAlertSound(kSystemSoundID_Vibrate);
     
     UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.screenwidth, self.num_label.frame.origin.y+self.num_label.frame.size.height)];
     v.backgroundColor=[UIColor clearColor];
@@ -350,6 +369,7 @@
 
 -(IBAction)numpad_pressed:(id)sender
 {
+
     if (self.num_label.textColor == answer_color)
     {
         self.num_label.text=@"";

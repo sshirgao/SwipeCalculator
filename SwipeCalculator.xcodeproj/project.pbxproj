@@ -33,6 +33,7 @@
 		680308C31C6ED64900DF0C5D /* ic_info_48pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680308C01C6ED64900DF0C5D /* ic_info_48pt_2x.png */; };
 		680308C41C6ED64900DF0C5D /* ic_info_48pt_3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 680308C11C6ED64900DF0C5D /* ic_info_48pt_3x.png */; };
 		680308C51C6ED64900DF0C5D /* ic_info_48pt.png in Resources */ = {isa = PBXBuildFile; fileRef = 680308C21C6ED64900DF0C5D /* ic_info_48pt.png */; };
+		680308C71C6EF2BF00DF0C5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 680308C61C6EF2BF00DF0C5D /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		680308C01C6ED64900DF0C5D /* ic_info_48pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_48pt_2x.png; sourceTree = "<group>"; };
 		680308C11C6ED64900DF0C5D /* ic_info_48pt_3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_48pt_3x.png; sourceTree = "<group>"; };
 		680308C21C6ED64900DF0C5D /* ic_info_48pt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_info_48pt.png; sourceTree = "<group>"; };
+		680308C61C6EF2BF00DF0C5D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680308C71C6EF2BF00DF0C5D /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +86,7 @@
 		680308721C6EC60B00DF0C5D = {
 			isa = PBXGroup;
 			children = (
+				680308C61C6EF2BF00DF0C5D /* AudioToolbox.framework */,
 				6803087D1C6EC60B00DF0C5D /* SwipeCalculator */,
 				6803087C1C6EC60B00DF0C5D /* Products */,
 			);
