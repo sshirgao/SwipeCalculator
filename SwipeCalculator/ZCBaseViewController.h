@@ -32,6 +32,7 @@
 -(void)placeview:(UIView *)view1 belowview:(UIView *)view2 withoffset:(int)offset;
 -(void)placeview:(UIView *)view1 aboveview:(UIView *)view2 withoffset:(int)offset;
 -(void)placeview:(UIView *)view1 toRightofView:(UIView *)view2 withoffset:(int)offset;
+-(void)placeview:(UIView *)view1 toleftofView:(UIView *)view2 withoffset:(int)offset;
 -(void)resizeimageinimageview:(UIImageView *)imgv andcenteritwithwidthoffset:(int)offset;
 -(void)resizebutton:(UIButton *)b andcenteritwithwidthoffset:(int)offset;
 -(void)center_view:(UIView *)v;

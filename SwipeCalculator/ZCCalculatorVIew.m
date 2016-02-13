@@ -75,22 +75,89 @@
         self.transac_label.font = [UIFont systemFontOfSize:30];
     [[self view] addSubview:transac_disp];
     
+    UIImageView *imgv = [[UIImageView alloc] initWithFrame:CGRectMake(0, self.num_label.frame.origin.y-20, 40, 40)];
+    imgv.contentMode = UIViewContentModeScaleAspectFit;
+    [imgv setImage:[UIImage imageNamed:@"ic_info_48pt"]];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(info_tap)];
+    [imgv addGestureRecognizer:tap];
+    imgv.userInteractionEnabled = YES;
+    [self.view addSubview:imgv];
     
+    
+}
 
+-(void)info_tap
+{
+    UIView *v = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    v.backgroundColor = [UIColor blackColor];
+    v.alpha = 0.65;
+    v.tag = 12345;
+    
+    UIImageView *uparrow = [[UIImageView alloc] initWithFrame:CGRectMake(0,self.transac_label.frame.origin.y+self.transac_label.frame.size.height, 50,50)];
+    [uparrow setImage:[UIImage imageNamed:@"ic_arrow_upward_white_48pt"]];
+    [uparrow setContentMode:UIViewContentModeScaleAspectFit];
+    UILabel *add = [self get_label_for_text:@"Addition"];
+    [self placeview:add belowview:uparrow withoffset:10];
+    [self center_view:uparrow];
+    [self center_view:add];
+    [v addSubview:uparrow];
+    [v addSubview:add];
+    
+    UIImageView *leftarrow = [[UIImageView alloc] initWithFrame:CGRectMake(0,(self.screenheight -  (self.transac_label.frame.origin.y+self.transac_label.frame.size.height))/2,50,50)];
+    [leftarrow setImage:[UIImage imageNamed:@"ic_arrow_back_white_48pt"]];
+    [leftarrow setContentMode:UIViewContentModeScaleAspectFit];
+    UILabel *sub = [self get_label_for_text:@"Division"];
+    CGRect temps = sub.frame;
+    temps.origin.x = 10;
+    sub.frame = temps;
+    [self placeview:sub belowview:leftarrow withoffset:10];
+    [v addSubview:leftarrow];
+    [v addSubview:sub];
+    
+    
+    UIImageView *rightarr = [[UIImageView alloc] initWithFrame:CGRectMake(self.screenwidth-50,(self.screenheight -  (self.transac_label.frame.origin.y+self.transac_label.frame.size.height))/2,50,50)];
+    [rightarr setImage:[UIImage imageNamed:@"ic_arrow_forward_white_48pt"]];
+    [rightarr setContentMode:UIViewContentModeScaleAspectFit];
+    UILabel *mul = [self get_label_for_text:@"Multiplication"];
+    CGRect temp = mul.frame;
+    temp.origin.x = rightarr.frame.origin.x-rightarr.frame.size.width-10;
+    mul.frame = temp;
+    [self placeview:mul belowview:rightarr withoffset:10];
+    [v addSubview:rightarr];
+    [v addSubview:mul];
+    
+    UIImageView *downarrow = [[UIImageView alloc] initWithFrame:CGRectMake(0,self.screenheight-50,50,50)];
+    [downarrow setImage:[UIImage imageNamed:@"ic_arrow_downward_white_48pt"]];
+    [downarrow setContentMode:UIViewContentModeScaleAspectFit];
+    UILabel *div = [self get_label_for_text:@"Subtraction"];
+    [self placeview:div aboveview:downarrow withoffset:10];
+    [self center_view:div];
+    [self center_view:downarrow];
+    [v addSubview:downarrow];
+    [v addSubview:div];
+    
+    UITapGestureRecognizer *remove_tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(remove_help_view)];
+    [v addGestureRecognizer:remove_tap];
+    v.userInteractionEnabled = YES;
 
+    [self.view addSubview:v];
 
     
-    
-    
-//    [[self view] addSubview:invisible_view];
+}
 
-    
+-(UILabel *)get_label_for_text:(NSString *)txt
+{
+    UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectZero];
+    lbl.text = txt;
+    [lbl sizeToFit];
+    lbl.textColor = [UIColor whiteColor];
+    return lbl;
+}
 
-    
-    
-    
-    
-
+-(void)remove_help_view
+{
+    UIView *v = [self.view viewWithTag:12345];
+    [v removeFromSuperview];
 }
 
 -(void)add

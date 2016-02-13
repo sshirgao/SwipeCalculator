@@ -36,7 +36,7 @@
 -(void)placeview:(UIView *)view1 aboveview:(UIView *)view2 withoffset:(int)offset
 {
     CGRect temp = view1.frame;
-    temp.origin.y = view2.frame.origin.y - view2.frame.size.height-offset;
+    temp.origin.y = view2.frame.origin.y - view1.frame.size.height-offset;
     view1.frame = temp;
 }
 
@@ -47,6 +47,15 @@
     temp.origin.y = view2.frame.origin.y;
     view1.frame = temp;
 }
+
+-(void)placeview:(UIView *)view1 toleftofView:(UIView *)view2 withoffset:(int)offset
+{
+    CGRect temp = view1.frame;
+    temp.origin.x = view2.frame.origin.x - view1.frame.size.width - offset;
+    temp.origin.y = view2.frame.origin.y;
+    view1.frame = temp;
+}
+
 
 
 -(void)center_view:(UIView *)v
