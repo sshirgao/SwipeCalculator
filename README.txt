@@ -54,6 +54,9 @@ Cascaded operations works on any number of operations followed any number of tim
 
 
 
+REFERENCES:
+
+1. https://gist.github.com/nateflink/6179686 for the UIColorFromRGB macro.
 
 
 
